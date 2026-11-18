@@ -2,6 +2,9 @@
 
 A full-stack, enterprise-grade, photography-driven admission platform and institutional web experience built for the **Institute of Engineering & Management (IEM), Kolkata**.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvidyanand462%2Fiem_website&root-directory=frontend)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/vidyanand462/iem_website)
+
 ---
 
 ## 🏛️ System Architecture & Highlights
