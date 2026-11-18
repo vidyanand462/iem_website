@@ -1,0 +1,39 @@
+import { DataTypes } from 'sequelize';
+import { sequelize } from '../config/db.js';
+import { ROLES } from '../constants/roles.js';
+
+export const User = sequelize.define('User', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+    validate: {
+      isEmail: true,
+    },
+  },
+  password_hash: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  role: {
+    type: DataTypes.ENUM(ROLES.APPLICANT, ROLES.ADMIN),
+    allowNull: false,
+    defaultValue: ROLES.APPLICANT,
+  },
+  is_active: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true,
+  },
+}, {
+  tableName: 'users',
+  timestamps: true,
+  createdAt: 'created_at',
+  updatedAt: 'updated_at',
+});
+
+export default User;

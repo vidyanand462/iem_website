@@ -1,0 +1,47 @@
+export const GLOBAL_COLLABORATIONS = [
+  {
+    id: 'usa',
+    country: 'United States',
+    x: 22, // percentage on world map
+    y: 35,
+    institution: 'University of Nevada, Las Vegas / IEEE Conferences Hub',
+    collaborationType: 'Joint International Conferences & Academic Exchange',
+    highlight: 'Annual international IEEE/IEM research symposiums hosted jointly.',
+  },
+  {
+    id: 'uk',
+    country: 'United Kingdom',
+    x: 48,
+    y: 28,
+    institution: 'Brunel University London',
+    collaborationType: 'Student Immersion & Faculty Research Workshops',
+    highlight: 'Summer workshops on artificial intelligence and sustainable engineering.',
+  },
+  {
+    id: 'singapore',
+    country: 'Singapore',
+    x: 77,
+    y: 58,
+    institution: 'National University of Singapore (Collaborative Workshops)',
+    collaborationType: 'Industry Immersion & Technical Competitions',
+    highlight: 'Student delegations participate in regional robotics competitions and innovation summits.',
+  },
+  {
+    id: 'canada',
+    country: 'Canada',
+    x: 20,
+    y: 24,
+    institution: 'University of British Columbia (Academic Forums)',
+    collaborationType: 'Research Paper Reviews & Scholar Exchange',
+    highlight: 'Collaborative peer-review and co-authorship on clean energy research.',
+  },
+  {
+    id: 'australia',
+    country: 'Australia',
+    x: 84,
+    y: 72,
+    institution: 'Deakin University (Academic Dialogues)',
+    collaborationType: 'Curriculum Benchmarking & Post-Graduate Pathways',
+    highlight: 'Advisory insights on global curriculum standardisation.',
+  },
+];

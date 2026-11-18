@@ -1,0 +1,24 @@
+{
+  "name": "iem-admission-system",
+  "version": "1.0.0",
+  "description": "Institute of Engineering & Management (IEM), Kolkata - Centralized Admissions Platform",
+  "type": "module",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
+    "start": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "postinstall": "cd backend && npm install"
+  },
+  "keywords": [
+    "iem",
+    "kolkata",
+    "admissions",
+    "react",
+    "express",
+    "vite",
+    "fullstack"
+  ],
+  "author": "Vidyanand Prasad (vidyanand462)",
+  "license": "ISC"
+}
