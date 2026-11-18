@@ -111,3 +111,35 @@ cd backend
 npm test
 ```
 Tests cover registration validation, duplicate prevention, password hashing, draft creation, multi-step updates, incomplete submission blocking, admin review, transactional seat decrement, and rejection reason enforcement.
+
+---
+
+## 🌐 Deployment Guide (GitHub, Vercel & Render)
+
+### 1. Push to GitHub (`https://github.com/vidyanand462/iem_website`)
+1. Create a new repository on GitHub:
+   - Visit: [https://github.com/new](https://github.com/new)
+   - Repository Name: `iem_website`
+   - Set to **Public**
+   - Leave "Add a README file" **unchecked**
+   - Click **Create repository**
+2. Push your project:
+   ```bash
+   git push -u origin main
+   ```
+   *(Or run `push_to_github.bat` in the root folder).*
+
+### 2. Deploy Frontend on Vercel (1-Click, Free)
+1. Go to [https://vercel.com](https://vercel.com) and log in with your GitHub (`vidyanand462`).
+2. Click **Add New Project** → Select **`iem_website`**.
+3. Set **Root Directory**: `frontend`.
+4. Click **Deploy**! Your site is live in under 60 seconds with free custom domains and HTTPS.
+
+### 3. Deploy Fullstack All-in-One on Render (Free)
+1. Go to [https://render.com](https://render.com) and log in with GitHub.
+2. Click **New +** → **Web Service** → Connect **`iem_website`**.
+3. Render detects `render.yaml` automatically, or set:
+   - **Build Command**: `cd frontend && npm install && npm run build && cd ../backend && npm install`
+   - **Start Command**: `cd backend && npm start`
+4. Click **Create Web Service**. Your entire application (React SPA + Express API + SQLite database) will run live on a free `.onrender.com` URL!
+
