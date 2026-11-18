@@ -31,7 +31,8 @@ const initDatabase = () => {
     });
   } else {
     // Default SQLite mode for effortless zero-config development
-    const dataDir = path.resolve(__dirname, '../../data');
+    const isVercel = process.env.VERCEL === '1' || process.env.AWS_LAMBDA_FUNCTION_NAME;
+    const dataDir = isVercel ? '/tmp' : path.resolve(__dirname, '../../data');
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
     }
@@ -63,7 +64,8 @@ export const connectDB = async () => {
   } catch (error) {
     if (env.DB_DIALECT === 'mysql') {
       console.warn('[DB] MySQL connection failed. Falling back to local SQLite database for uninterrupted development...');
-      const dataDir = path.resolve(__dirname, '../../data');
+      const isVercel = process.env.VERCEL === '1' || process.env.AWS_LAMBDA_FUNCTION_NAME;
+      const dataDir = isVercel ? '/tmp' : path.resolve(__dirname, '../../data');
       if (!fs.existsSync(dataDir)) {
         fs.mkdirSync(dataDir, { recursive: true });
       }

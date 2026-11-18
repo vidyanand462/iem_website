@@ -21,8 +21,9 @@ const startServer = async () => {
     await connectMongo();
 
     // 4. Start HTTP Server
-    app.listen(env.PORT, () => {
+    app.listen(env.PORT, '0.0.0.0', () => {
       console.log(`[Server] Live on http://localhost:${env.PORT}`);
+      console.log(`[Server] Network access: http://0.0.0.0:${env.PORT}`);
       console.log(`[Server] API base endpoint: http://localhost:${env.PORT}${env.API_PREFIX}`);
       console.log(`[Server] Environment: ${env.NODE_ENV}`);
       console.log('====================================================');

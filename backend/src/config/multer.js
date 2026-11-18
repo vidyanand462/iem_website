@@ -9,7 +9,8 @@ import { ERROR_CODES } from '../constants/errorCodes.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uploadPath = path.resolve(__dirname, '../../uploads');
+const isVercel = process.env.VERCEL === '1' || process.env.AWS_LAMBDA_FUNCTION_NAME;
+const uploadPath = isVercel ? path.join('/tmp', 'uploads') : path.resolve(__dirname, '../../uploads');
 if (!fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath, { recursive: true });
 }
